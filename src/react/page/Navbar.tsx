@@ -1,10 +1,10 @@
-import {ReactNode} from "react";
+//import {ReactNode} from "react";
 
-interface NavBarProps{
+/*interface NavBarProps{
     pages: ReactNode[];
-}
+}*/
 
-function NavBar({pages}: NavBarProps) {
+function NavBar() {
     return (
       <>
           <nav className="navbar navbar-expand-lg navbar-dark bg-dark p-0 bg-800">

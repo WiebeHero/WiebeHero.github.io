@@ -1,11 +1,11 @@
 import NavBar from "./Navbar.tsx";
-import {ReactNode} from "react";
+//import {ReactNode} from "react";
 
 function PageManager(){
-    const pages: ReactNode[] = [];
+    //const pages: ReactNode[] = [];
     return (
       <>
-        <NavBar pages={pages}></NavBar>
+        <NavBar ></NavBar>
       </>
     );
 }
