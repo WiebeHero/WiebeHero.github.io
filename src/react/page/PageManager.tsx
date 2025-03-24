@@ -1,11 +1,11 @@
 import NavBar from "./Navbar.tsx";
 import Home from "./locations/Home.tsx";
-import {useEffect, useRef, useState} from "react";
+import {useEffect/*, useRef*/, useState} from "react";
 //import {ReactNode} from "react";
 
 function PageManager(){
     const [location, setLocation] = useState(<Home></Home>);
-    const didMount = useRef(false);
+    //const didMount = useRef(false);
     useEffect(() => {
         /*if ( !didMount.current ) {
             didMount.current = true;
