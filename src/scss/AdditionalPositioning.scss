@@ -4,7 +4,7 @@
 @import "../../node_modules/bootstrap/scss/maps";
 @import "../../node_modules/bootstrap/scss/mixins";
 @import "../../node_modules/bootstrap/scss/utilities";
-@import "../../src/scss/Maps";
+@import "../../src/scss/TransformMaps";
 
 //Start additions.
 $utilities: map-merge(
@@ -26,7 +26,7 @@ $utilities: map-merge(
   )
 );
 
-//Start additions.
+//Top additions.
 $utilities: map-merge(
   $utilities,
   (
@@ -37,6 +37,46 @@ $utilities: map-merge(
         values:
         map-merge(
           map-get(map-get($utilities, "top"), "values"),
+          (
+            $mapTransform
+          )
+        ),
+      )
+    ),
+  )
+);
+
+//End additions.
+$utilities: map-merge(
+  $utilities,
+  (
+    "end":
+    map-merge(
+      map-get($utilities, "end"),
+      (
+        values:
+        map-merge(
+          map-get(map-get($utilities, "end"), "values"),
+          (
+            $mapTransform
+          )
+        ),
+      )
+    ),
+  )
+);
+
+//Top additions.
+$utilities: map-merge(
+  $utilities,
+  (
+    "bottom":
+    map-merge(
+      map-get($utilities, "bottom"),
+      (
+        values:
+        map-merge(
+          map-get(map-get($utilities, "bottom"), "values"),
           (
             $mapTransform
           )

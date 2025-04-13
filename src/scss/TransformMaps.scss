@@ -102,6 +102,11 @@ $mapTransform: (
   99: 99%,
   100: 100%,
   50p: 50px,
+  55p: 55px,
+  60p: 60px,
+  65p: 65px,
+  70p: 70px,
+  75p: 75px,
   100p: 100px,
   150p: 150px,
   200p: 200px,
@@ -140,3 +145,18 @@ $mapTransform: (
   1850p: 1850px,
   1900p: 1900px,
 );
+
+$maxMapTransform: (
+  25mx5: max(25px, 5%),
+  50mx5: max(50px, 5%),
+  75mx5: max(75px, 5%),
+  100mx5: max(100px, 5%),
+  25mx10: max(25px, 10%),
+  50mx10: max(50px, 10%),
+  75mx10: max(75px, 10%),
+  100mx10: max(100px, 10%),
+  25mx15: max(25px, 15%),
+  50mx15: max(50px, 15%),
+  75mx15: max(75px, 15%),
+  100mx15: max(100px, 15%),
+)
