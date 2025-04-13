@@ -1,0 +1,18 @@
+.opacity-none{
+    opacity: 0;
+}
+
+.translate-y-50{
+    transform: translateY(50px);
+}
+
+.opacity-fade-in{
+    animation: opacity-from-zero-to-one 1s forwards;
+}
+
+@keyframes opacity-from-zero-to-one{
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

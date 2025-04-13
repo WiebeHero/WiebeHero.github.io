@@ -1,17 +1,19 @@
-.translate-x-1000-pos-transition{
-    transition: transform 2s cubic-bezier(0.21, 0.5, 0.63, 0.94);
+.translate-x-100pc-pos-transition{
     transform: translateX(100%);
+    transition: transform 1s ease-out;
 }
 
-.translate-x-1000-pos-transition-parent:hover .translate-x-1000-pos-transition{
-    transform: translateX(1000px);
-}
-
-.translate-x-1000-neg-transition{
-    transform: translateX(0px);
-}
-
-.translate-x-1000-neg-transition-parent .translate-x-1000-neg-transition{
+.translate-x-100pc-neg-transition{
     transform: translateX(-100%);
-    transition: transform 2s cubic-bezier(0.21, 0.5, 0.63, 0.94);
+    transition: transform 1s ease-out;
+}
+
+.translate-x-110pc-neg-animation{
+    animation: translate-110pc-negative-animation 1s;
+}
+
+@keyframes translate-110pc-negative-animation{
+    100%{
+        transform: translateX(-110%);
+    }
 }
