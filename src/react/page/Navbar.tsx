@@ -16,8 +16,8 @@ function NavBar({locationChange, setAnimationState}: NavBarProps) {
     return (
       <>
           <nav className="navbar navbar-dark bg-dark p-0 bg-800 position-sticky top-0">
-              <p className="d-flex navbar-brand h2 fs-2 ms-5 mb-2 ps-5 pt-2 pb-0">Wiebe</p>
-              <div className="d-flex justify-content-end w-50">
+              <p className="d-flex navbar-brand h2 fs-2 ms-sm-5 mb-2 ps-sm-5 ps-3 pt-2 pb-0">Wiebe</p>
+              <div className="d-flex justify-content-end w-50 min-w-300p">
                   <div className={"justify-content-end row pe-4 m-0 w-60 min-w-300p"}>
                       <div className={`${stylingDiv} hover-scale-transition-parent-1-2`}>
                           <p onClick={() => {
