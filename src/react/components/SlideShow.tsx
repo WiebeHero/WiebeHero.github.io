@@ -27,7 +27,7 @@ function SlideShow({assetCollection}: Assets) {
 
     return (
         <>
-            <div className="w-50 min-w-350p p-0 m-0 position-relative">
+            <div className="w-50 min-w-325p p-0 m-0 position-relative">
                 <div className={"hover-opacity-transition-parent-0"}>
                     <video key={assetCollection[contentIndex].Video} className={"video-slider w-100 h-100 position-absolute"} controls>
                         <source src={assetCollection[contentIndex].Video} type="video/mp4"/>
