@@ -27,7 +27,7 @@ function SlideShow({assetCollection}: Assets) {
 
     return (
         <>
-            <div className="w-50 min-w-400p p-0 m-0 position-relative">
+            <div className="w-50 min-w-350p p-0 m-0 position-relative">
                 <div className={"hover-opacity-transition-parent-0"}>
                     <video key={assetCollection[contentIndex].Video} className={"video-slider w-100 h-100 position-absolute"} controls>
                         <source src={assetCollection[contentIndex].Video} type="video/mp4"/>
@@ -59,9 +59,9 @@ function SlideShow({assetCollection}: Assets) {
                         </>
                     ))}
                 </div>*/}
-                <button onClick={showPreviousImage} className={`${buttonStyle} start-50np`}><p
+                <button onClick={showPreviousImage} className={`${buttonStyle} start-35np`}><p
                     className={`${buttonTextStyle}`}>{"<"}</p></button>
-                <button onClick={showNextImage} className={`${buttonStyle} end-50np`}><p
+                <button onClick={showNextImage} className={`${buttonStyle} end-35np`}><p
                     className={`${buttonTextStyle}`}>{">"}</p></button>
                 <div className={"position-absolute bottom-50np start-50 translate-50n d-flex gap-1 z-3"}>
                     {assetCollection.map((_asset: AssetEntry, index) => (
