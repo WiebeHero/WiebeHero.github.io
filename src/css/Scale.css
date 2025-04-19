@@ -42,3 +42,17 @@
 .hover-scale-transition-parent-1-5:hover .hover-scale-transition-1-5{
     transform: scale(1.5);
 }
+
+.pop-animation:hover{
+    animation: squish 200ms ease-in-out;
+}
+
+.pop-animation-children:hover > *{
+    animation: squish 200ms ease-in-out;
+}
+
+@keyframes squish {
+    50%{
+        scale: 1.4 0.6;
+    }
+}

@@ -1,4 +1,7 @@
 import SlideShow from "../../components/SlideShow.tsx";
+import AssetManager from "../../assets/AssetManager.ts";
+
+const assetCollection = [AssetManager.FreezerCollection, AssetManager.ALittleToLateCollection, AssetManager.TractorCollection, AssetManager.SweetDreamsCollection];
 
 function Home(){
     const iconStyle = "w-15 min-w-50p rounded-circle position-absolute";
@@ -28,8 +31,9 @@ function Home(){
                 <p className={"text-white h4 mt-1 min-w-200p max-w-450p text-center"}>An app developer/Gameplay
                     programmer.</p>
                 <div className={"w-100 d-flex flex-column align-items-center mt-5"}>
-                    <SlideShow></SlideShow>
+                    <p className={"h3 text-center text-white"}>Projects i am most proud of.</p>
                 </div>
+                <SlideShow assetCollection={assetCollection}></SlideShow>
             </div>
         </>
     );

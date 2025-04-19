@@ -12,10 +12,10 @@ function NavBar({locationChange, setAnimationState}: NavBarProps) {
     const [currentPage, setCurrentPage] = useState(0);
     const [busy, setBusy] = useState(false);
     const stylingDiv = "container-fluid navbar-item col p-0 text-center";
-    const stylingText = "cursor-pointer navbar-item text-white mt-2 p-0 min-width-100px text-center h3 hover-scale-transition-1-2";
+    const stylingText = "cursor-pointer fs-3 navbar-item text-white mt-2 p-0 min-width-100px text-center h3 hover-scale-transition-1-2";
     return (
       <>
-          <nav className="navbar navbar-dark bg-dark p-0 bg-800 position-sticky top-0">
+          <nav className="navbar navbar-dark bg-dark p-0 bg-800 position-sticky top-0 z-3">
               <p className="d-flex navbar-brand h2 fs-2 ms-sm-5 mb-2 ps-sm-5 ps-3 pt-2 pb-0">Wiebe</p>
               <div className="d-flex justify-content-end w-50 min-w-300p">
                   <div className={"justify-content-end row pe-4 m-0 w-60 min-w-300p"}>

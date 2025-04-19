@@ -33,6 +33,33 @@ $utilities: map-merge(
   )
 );
 
+//Minimum width additions.
+$utilities: map-merge(
+  $utilities,
+  (
+    "min-h": (
+      property: min-height,
+      class: min-h,
+      values: (
+        $mapTransform
+      ),
+    ),
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "max-h": (
+      property: max-height,
+      class: max-h,
+      values: (
+        $mapTransform
+      ),
+    ),
+  )
+);
+
 //Height additions.
 $utilities: map-merge(
   $utilities,
