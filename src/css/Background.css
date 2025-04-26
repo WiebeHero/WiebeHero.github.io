@@ -6,3 +6,12 @@
 .background-hover-black:hover{
     background-color: rgb(0, 0, 0, 0.4);
 }
+
+.background-hover-gray {
+    background-color: #343a40;
+    transition: background-color 0.25s ease-in-out;
+}
+
+.background-hover-gray:hover {
+    background-color: #4f5861;
+}

@@ -21,6 +21,21 @@ function NavBar({locationChange, setAnimationState}: NavBarProps) {
 
     }, [currentPage]);
 
+    function changePage(page: React.ReactElement<any, string | React.JSXElementConstructor<any>> | undefined, pageNumber: number){
+        if(currentPage === pageNumber || busy)
+            return;
+        setBusy(true);
+        setCurrentPage(pageNumber);
+        setAnimationState(new AnimationState(true, false));
+        setTimeout(() => {
+            setAnimationState(new AnimationState(false, true));
+            locationChange(page);
+            setTimeout(() =>{
+                setBusy(false);
+            }, 950);
+        }, 950);
+    }
+
     return (
       <>
           <nav className="navbar navbar-dark bg-dark p-0 bg-800 position-sticky top-0 z-3">
@@ -30,49 +45,19 @@ function NavBar({locationChange, setAnimationState}: NavBarProps) {
                       <div className={`${stylingDiv} hover-scale-transition-parent-1-2`}>
                           <p onClick={() => {
                               console.log("Changing location...");
-                              if(currentPage === 0 || busy)
-                                  return;
-                              setBusy(true);
-                              setCurrentPage(0);
-                              setAnimationState(new AnimationState(true, false));
-                              setTimeout(() => {
-                                  setAnimationState(new AnimationState(false, true));
-                                  locationChange(<Home></Home>);
-                                  setTimeout(() =>{
-                                      setBusy(false);
-                                  }, 950);
-                              }, 950);
+                              changePage(<Home></Home>, 0);
                           }} className={`${currentPage == 0 ? textChange() : ""} ${stylingText}`}>Home</p>
                       </div>
                       <div className={`${stylingDiv} hover-scale-transition-parent-1-2`}>
                           <p onClick={() => {
                               console.log("Changing location...");
-                              if(currentPage === 1 || busy)
-                                  return;
-                              setBusy(true);
-                              setCurrentPage(1);
-                              setAnimationState(new AnimationState(true, false));
-                              setTimeout(() => {
-                                  setAnimationState(new AnimationState(false, true));
-                                  locationChange(<About></About>);
-                                  setTimeout(() =>{
-                                      setBusy(false);
-                                  }, 950);
-                              }, 950);
+                              changePage(<About></About>, 1);
                           }} className={`${currentPage == 1 ? textChange() : ""} ${stylingText}`}>About</p>
                       </div>
                       <div className={`${stylingDiv} hover-scale-transition-parent-1-2 ps-2`}>
                           <p onClick={() => {
                               console.log("Changing location...");
-                              setCurrentPage(2);
-                              setAnimationState(new AnimationState(true, false));
-                              setTimeout(() => {
-                                  setAnimationState(new AnimationState(false, true));
-                                  locationChange(<Portfolio></Portfolio>);
-                                  setTimeout(() =>{
-                                      setBusy(false);
-                                  }, 950);
-                              }, 950);
+                              changePage(<Portfolio changePage={changePage}></Portfolio>, 2);
                           }} className={`${currentPage == 2 ? textChange() : ""} ${stylingText}`}>Portfolio</p>
                       </div>
                   </div>

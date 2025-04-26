@@ -41,8 +41,8 @@ function SlideShow({assetCollection}: Assets) {
         <>
             <div className="w-50 min-w-300p p-0 m-0 position-relative">
                 <div className={"hover-opacity-transition-parent-0"}>
-                    <video onPause={() => {setVideoPlaying(false)}} onPlay={() => {setVideoPlaying(true)}} key={assetCollection[contentIndex].GetEntry("Video")} className={"video-slider w-100 h-100 position-absolute"} controls>
-                        <source src={assetCollection[contentIndex].GetEntry("Video")} type="video/mp4"/>
+                    <video onPause={() => {setVideoPlaying(false)}} onPlay={() => {setVideoPlaying(true)}} key={assetCollection[contentIndex].GetContentEntry("Video")} className={"video-slider w-100 h-100 position-absolute"} controls>
+                        <source src={assetCollection[contentIndex].GetContentEntry("Video")} type="video/mp4"/>
                         Your browser doesn't support the video tag.
                     </video>
                     <div ref={thumbnailElement} className={`${videoPlaying ? "opacity-0 invisible" : "hover-opacity-transition-0"}`}
@@ -54,7 +54,7 @@ function SlideShow({assetCollection}: Assets) {
                             Your browser doesn't support the video tag.
                         </video>*/}
                                 <img className={"w-100 z-3 object-fit-cover flex-shrink-0 flex-grow-0 translate-transition"}
-                                     src={`${asset.GetEntry("Image")}`} alt={""}
+                                     src={`${asset.GetContentEntry("Image")}`} alt={""}
                                      style={{translate: `${-100 * contentIndex}%`}}/>
                             </>
                         ))}

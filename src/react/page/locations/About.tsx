@@ -8,7 +8,7 @@ function About(){
         <>
             <div className="container-fluid d-flex flex-column p-0 w-100 h-100 position-relative align-items-center">
                 <div className={"min-w-350p w-100 d-flex align-items-center justify-content-center mt-5 mb-3 pt-5 position-relative"}>
-                    <img className={"w-70 rounded-pill"} src={`${meCollection.GetEntry("Image")}`} alt={"Missing"}/>
+                    <img className={"w-50 min-w-400p rounded-pill"} src={`${meCollection.GetContentEntry("Image")}`} alt={"Missing"}/>
                     <p className={"w-100 position-absolute start-50 bottom-10 text-white h1 translate-50n text-center m-0"}>Hey,
                         i'm Wiebe.</p>
                 </div>
