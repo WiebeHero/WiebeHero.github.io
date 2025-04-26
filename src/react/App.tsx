@@ -1,11 +1,13 @@
 import PageManager from "./page/PageManager.tsx";
+import AssetManager from "./assets/AssetManager.ts";
 
 function App(){
- return(
-   <>
-       <PageManager></PageManager>
-   </>
- );
+    AssetManager.Construct();
+    return(
+        <>
+           <PageManager></PageManager>
+        </>
+    );
 }
 
 export default App;

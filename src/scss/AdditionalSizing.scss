@@ -100,4 +100,24 @@ $utilities: map-merge(
   )
 );
 
+//Width additions
+$utilities: map-merge(
+  $utilities,
+  (
+    "font-size":
+    map-merge(
+        map-get($utilities, "font-size"),
+        (
+          values:
+          map-merge(
+            map-get(map-get($utilities, "width"), "values"),
+              (
+                map-merge(($mapTransform), ($clampMapTransform))
+              )
+          ),
+        )
+    ),
+  )
+);
+
 @import "../../node_modules/bootstrap/scss/utilities/api";

@@ -28,7 +28,7 @@ function Home(){
                                                                                      className={`${iconStyle} top-90 end-7 hover-scale-transition-1-2`}/></a>
                 </div>
                 <p className={"text-white h2 mt-5 min-w-100p max-w-250p text-center"}>Wiebe</p>
-                <p className={"text-white h4 mt-1 min-w-200p max-w-450p text-center"}>An app developer/Gameplay
+                <p className={"text-white h4 mt-1 min-w-200p max-w-450p text-center"}>An software developer/Gameplay
                     programmer.</p>
                 <div className={"w-100 d-flex flex-column align-items-center mt-5"}>
                     <p className={"h3 text-center text-white"}>Projects i am most proud of.</p>

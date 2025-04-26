@@ -1,21 +1,20 @@
 class AssetEntry {
 
-    private readonly image: string;
-    private readonly video: string;
+    private contentMap: Map<string, string>;
 
-    public constructor(image: string, video: string) {
-        this.image = image;
-        this.video = video;
+    public constructor() {
+        this.contentMap = new Map();
     }
 
-    public get Image(){
-        return this.image;
+    public AddEntry(identifier: string, content: string) {
+        this.contentMap.set(identifier, content);
     }
 
-    public get Video(){
-        return this.video;
+    public GetEntry(identifier: string): string | undefined{
+        console.log("Getting entry of: ", identifier);
+        console.log(this.contentMap.get(identifier));
+        return this.contentMap.get(identifier);
     }
-
 }
 
 export default AssetEntry;

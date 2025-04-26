@@ -1,7 +1,8 @@
 import Home from "./locations/Home.tsx";
 import About from "./locations/About.tsx";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import AnimationState from "./AnimationState.ts";
+import Portfolio from "./locations/Portfolio/Portfolio.tsx";
 
 interface NavBarProps{
     locationChange: any;
@@ -13,6 +14,13 @@ function NavBar({locationChange, setAnimationState}: NavBarProps) {
     const [busy, setBusy] = useState(false);
     const stylingDiv = "container-fluid navbar-item col p-0 text-center";
     const stylingText = "cursor-pointer fs-3 navbar-item text-white mt-2 p-0 min-width-100px text-center h3 hover-scale-transition-1-2";
+
+    useEffect(() => {
+
+        console.log("Page loaded!");
+
+    }, [currentPage]);
+
     return (
       <>
           <nav className="navbar navbar-dark bg-dark p-0 bg-800 position-sticky top-0 z-3">
@@ -57,7 +65,14 @@ function NavBar({locationChange, setAnimationState}: NavBarProps) {
                           <p onClick={() => {
                               console.log("Changing location...");
                               setCurrentPage(2);
-                              locationChange();
+                              setAnimationState(new AnimationState(true, false));
+                              setTimeout(() => {
+                                  setAnimationState(new AnimationState(false, true));
+                                  locationChange(<Portfolio></Portfolio>);
+                                  setTimeout(() =>{
+                                      setBusy(false);
+                                  }, 950);
+                              }, 950);
                           }} className={`${currentPage == 2 ? textChange() : ""} ${stylingText}`}>Portfolio</p>
                       </div>
                   </div>
