@@ -18,7 +18,7 @@ function FreezerProject({changePage}: FreezerProjectProps) {
               <div className="d-flex w-75 min-w-300p text-center flex-column align-items-center">
                   <p className={"h1 text-white mt-5 pt-5"}>VR Training Simulation – CO₂ Refrigeration System</p>
                   <p className={"text-white fs-4"}>Unity | C#</p>
-                  <p className={"w-60 text-white"}>A virtual reality training game designed to simulate equipment
+                  <p className={"w-85 text-white"}>A virtual reality training game designed to simulate equipment
                       maintenance within a retail environment.
                       The objective is to diagnose and repair issues in a CO₂ refrigeration installation within a set
                       time limit.

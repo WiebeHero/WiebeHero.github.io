@@ -15,9 +15,9 @@ function Portfolio({changePage}: PortfolioProps){
 
     const mapCollection: Map<AssetEntry, ReactElement> = new Map<AssetEntry, ReactElement>([
         [AssetManager.FreezerCollection, <FreezerProject changePage={changePage}></FreezerProject>],
-        [AssetManager.ALittleToLateCollection, <ALittleToLate></ALittleToLate>],
-        [AssetManager.TractorCollection, <TractorProject></TractorProject>],
-        [AssetManager.SweetDreamsCollection, <SweetDreams></SweetDreams>]
+        [AssetManager.ALittleToLateCollection, <ALittleToLate changePage={changePage}></ALittleToLate>],
+        [AssetManager.TractorCollection, <TractorProject changePage={changePage}></TractorProject>],
+        [AssetManager.SweetDreamsCollection, <SweetDreams changePage={changePage}></SweetDreams>]
     ]);
     const assetCollection = [AssetManager.FreezerCollection, AssetManager.ALittleToLateCollection, AssetManager.TractorCollection, AssetManager.SweetDreamsCollection];
 
