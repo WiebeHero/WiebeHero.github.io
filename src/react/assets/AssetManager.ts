@@ -3,19 +3,24 @@ import AssetEntry from "./AssetEntry.ts";
 import meImage from "/me/MeOnMountain.png";
 
 import freezerImage from "/projects/freezer_project/Freezer.png";
-import aLittleToLateImage from "/projects/a_little_to_late/ALittleToLate.png";
-import tractorImage from "/projects/tractor_project/Tractor.png";
-import sweetDreamsImage from "/projects/sweet_dreams/SweetDreams.jpg";
-
 import freezerThumbnail from "/projects/freezer_project/Thumbnail.png";
-import aLittleToLateThumbnail from "/projects/a_little_to_late/Thumbnail.png";
-import tractorThumbnail from "/projects/tractor_project/Thumbnail.png";
-import sweetDreamsThumbnail from "/projects/sweet_dreams/Thumbnail.jpg";
-
 import freezerVideo from "/projects/freezer_project/FreezerProject.mp4";
+import teleportationAnchor from "/projects/freezer_project/teleportationanchor/TeleportationAnchor.png";
+import teleportationAnchorHover from "/projects/freezer_project/teleportationanchor/TeleportationAnchorHover.gif";
+import teleportationAnchorParticles from "/projects/freezer_project/teleportationanchor/TeleportationAnchorParticles.gif";
+
+import aLittleToLateImage from "/projects/a_little_to_late/ALittleToLate.png";
+import aLittleToLateThumbnail from "/projects/a_little_to_late/Thumbnail.png";
 import aLittleToLateVideo from "/projects/a_little_to_late/ALittleToLate.mp4";
+
+import tractorImage from "/projects/tractor_project/Tractor.png";
+import tractorThumbnail from "/projects/tractor_project/Thumbnail.png";
 import tractorVideo from "/projects/tractor_project/TractorProject.mp4";
+
+import sweetDreamsImage from "/projects/sweet_dreams/SweetDreams.jpg";
+import sweetDreamsThumbnail from "/projects/sweet_dreams/Thumbnail.jpg";
 import sweetDreamsVideo from "/projects/sweet_dreams/SweetDreams.mp4";
+
 
 class AssetManager {
 
@@ -40,6 +45,9 @@ class AssetManager {
         freezerCollection.AddContentEntry("Image", freezerImage);
         freezerCollection.AddContentEntry("Video", freezerVideo);
         freezerCollection.AddContentEntry("Thumbnail", freezerThumbnail);
+        freezerCollection.AddContentEntry("TeleportationAnchor", teleportationAnchor);
+        freezerCollection.AddContentEntry("TeleportationAnchorHover", teleportationAnchorHover);
+        freezerCollection.AddContentEntry("TeleportationAnchorParticles", teleportationAnchorParticles);
 
         let aLittleToLateCollection = AssetManager.aLittleToLateCollection;
         aLittleToLateCollection.AddContentEntry("Title", "A Little Too Late – Texting and Driving Awareness Game");
