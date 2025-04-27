@@ -8,6 +8,18 @@ import freezerVideo from "/projects/freezer_project/FreezerProject.mp4";
 import teleportationAnchor from "/projects/freezer_project/teleportationanchor/TeleportationAnchor.png";
 import teleportationAnchorHover from "/projects/freezer_project/teleportationanchor/TeleportationAnchorHover.gif";
 import teleportationAnchorParticles from "/projects/freezer_project/teleportationanchor/TeleportationAnchorParticles.gif";
+import tooltipDevelopment from "/projects/freezer_project/tooltip/TooltipStart.gif";
+import tooltipGlowingButton from "/projects/freezer_project/tooltip/GlowingButton.gif";
+import followTargetSettings from "/projects/freezer_project/followtarget/FollowTargetSettings.png";
+import inventoryRotations from "/projects/freezer_project/followtarget/InventoryRotation.gif";
+import inventorySkeleton from "/projects/freezer_project/inventory/InventorySkeleton.png";
+import cameras from "/projects/freezer_project/inventory/Cameras.png";
+import cameraSees from "/projects/freezer_project/inventory/CameraSees.png";
+import itemInInventory from "/projects/freezer_project/inventory/ItemInInventory.png";
+import inventoryItems from "/projects/freezer_project/inventory/InventoryItems.gif";
+import classDiagramSequence from "/projects/freezer_project/sequence/ClassDiagram.png";
+import tutorialPart1 from "/projects/freezer_project/sequence/TutorialPart1.gif";
+import tutorialPart2 from "/projects/freezer_project/sequence/TutorialPart2.gif";
 
 import aLittleToLateImage from "/projects/a_little_to_late/ALittleToLate.png";
 import aLittleToLateThumbnail from "/projects/a_little_to_late/Thumbnail.png";
@@ -48,6 +60,18 @@ class AssetManager {
         freezerCollection.AddContentEntry("TeleportationAnchor", teleportationAnchor);
         freezerCollection.AddContentEntry("TeleportationAnchorHover", teleportationAnchorHover);
         freezerCollection.AddContentEntry("TeleportationAnchorParticles", teleportationAnchorParticles);
+        freezerCollection.AddContentEntry("TooltipDevelopment", tooltipDevelopment);
+        freezerCollection.AddContentEntry("TooltipGlowingButton", tooltipGlowingButton);
+        freezerCollection.AddContentEntry("FollowTargetSettings", followTargetSettings);
+        freezerCollection.AddContentEntry("InventoryRotation", inventoryRotations);
+        freezerCollection.AddContentEntry("InventorySkeleton", inventorySkeleton);
+        freezerCollection.AddContentEntry("Cameras", cameras);
+        freezerCollection.AddContentEntry("CameraSees", cameraSees);
+        freezerCollection.AddContentEntry("ItemInInventory", itemInInventory);
+        freezerCollection.AddContentEntry("InventoryItems", inventoryItems);
+        freezerCollection.AddContentEntry("ClassDiagram", classDiagramSequence);
+        freezerCollection.AddContentEntry("TutorialPart1", tutorialPart1);
+        freezerCollection.AddContentEntry("TutorialPart2", tutorialPart2);
 
         let aLittleToLateCollection = AssetManager.aLittleToLateCollection;
         aLittleToLateCollection.AddContentEntry("Title", "A Little Too Late – Texting and Driving Awareness Game");
