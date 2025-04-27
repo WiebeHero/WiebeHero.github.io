@@ -357,19 +357,25 @@ function FreezerProject({changePage}: FreezerProjectProps) {
                               system that provided a clean, editor-driven approach—something I’m especially proud of, as
                               reflected in the class structure shown in Figure 21.
                           </p>
-                          <figure className={"w-100 d-flex flex-column align-items-center"}>
-                              <img className={"w-100 bg-white"} src={freezerCollection.GetContentEntry("TutorialPart1")}
-                                   alt={"Missing"}></img>
-                              <figcaption className={figureStyle}>Figure 14, Tutorial Part 1.</figcaption>
-                          </figure>
                       </div>
                       <div className={"d-flex flex-column col-xl-6 col-sm-12 col-12 align-items-center"}>
                           <figure className={"w-100 d-flex flex-column align-items-center"}>
                               <img className={"w-95 bg-white"} src={freezerCollection.GetContentEntry("ClassDiagram")}
                                    alt={"Missing"}></img>
+                              <figcaption className={figureStyle}>Figure 14, Tutorial Part 1.</figcaption>
+                          </figure>
+                      </div>
+                  </div>
+                  <div className={"d-flex flex-row flex-wrap align-content-center"}>
+                      <div className={"d-flex flex-column col-xl-6 col-sm-12 col-12 align-items-center"}>
+                          <figure className={"w-100 d-flex flex-column align-items-center"}>
+                              <img className={"w-100 bg-white"} src={freezerCollection.GetContentEntry("TutorialPart1")}
+                                   alt={"Missing"}></img>
                               <figcaption className={figureStyle}>Figure 13, Class Diagram Sequence.</figcaption>
                           </figure>
-                          <figure className={"w-100 d-flex flex-column align-items-center mt-5 pt-5"}>
+                      </div>
+                      <div className={"d-flex flex-column col-xl-6 col-sm-12 col-12 align-items-center"}>
+                          <figure className={"w-100 d-flex flex-column align-items-center"}>
                               <img className={"w-100 bg-white"} src={freezerCollection.GetContentEntry("TutorialPart2")}
                                    alt={"Missing"}></img>
                               <figcaption className={figureStyle}>Figure 15, Tutorial Part 2.</figcaption>
@@ -381,9 +387,9 @@ function FreezerProject({changePage}: FreezerProjectProps) {
               <div className="container w-75 min-w-300p d-flex align-items-center flex-column">
                   <p className={"h2 text-white mt-5 mb-3 text-center"}>Playthrough</p>
                   <div className={"d-flex flex-row flex-wrap align-content-center"}>
-                      <div className={"d-flex flex-column col-xl-12 col-sm-12 col-12"}>
+                  <div className={"d-flex flex-column col-xl-12 col-sm-12 col-12"}>
                           <video key={freezerCollection.GetContentEntry("Video")} className={"w-100"} controls>
-                              <source src={freezerCollection.GetContentEntry("Video")} type="video/mp4"/>
+                          <source src={freezerCollection.GetContentEntry("Video")} type="video/mp4"/>
                               Your browser doesn't support the video tag.
                           </video>
                       </div>
