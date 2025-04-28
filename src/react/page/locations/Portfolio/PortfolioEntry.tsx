@@ -1,11 +1,11 @@
 import AssetEntry from "../../../assets/AssetEntry.ts";
-import {ReactElement} from "react";
+import {JSX, ReactElement} from "react";
 
 interface PortfolioEntryProps{
     asset: AssetEntry
     last: boolean
     pageTarget: ReactElement
-    changePage: (page: React.ReactElement<any, string | React.JSXElementConstructor<any>> | undefined, pageNumber: number) => void;
+    changePage: (page: JSX.Element, pageNumber: number) => void;
 }
 
 function PortfolioEntry({asset, pageTarget, last, changePage}: PortfolioEntryProps) {

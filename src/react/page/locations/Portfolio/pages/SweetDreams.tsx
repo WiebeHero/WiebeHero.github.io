@@ -1,7 +1,8 @@
 import Back from "./Back.tsx";
+import {JSX} from "react";
 
 interface SweetDreamsProps{
-    changePage: (page: React.ReactElement<any, string | React.JSXElementConstructor<any>> | undefined, pageNumber: number) => void;
+    changePage: (page: JSX.Element, pageNumber: number) => void;
 }
 
 function SweetDreams({changePage}: SweetDreamsProps) {

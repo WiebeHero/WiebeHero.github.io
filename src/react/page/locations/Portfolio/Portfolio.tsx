@@ -1,31 +1,24 @@
-import AssetManager from "../../../assets/AssetManager.ts";
 import PortfolioEntry from "./PortfolioEntry.tsx";
-import FreezerProject from "./Pages/FreezerProject.tsx";
 import AssetEntry from "../../../assets/AssetEntry.ts";
-import {ReactElement} from "react";
-import ALittleToLate from "./Pages/ALittleToLate.tsx";
-import TractorProject from "./Pages/TractorProject.tsx";
-import SweetDreams from "./Pages/SweetDreams.tsx";
+import {JSX, ReactElement} from "react";
 
 interface PortfolioProps{
-    changePage: (page: React.ReactElement<any, string | React.JSXElementConstructor<any>> | undefined, pageNumber: number) => void;
+    content?: Map<AssetEntry, ReactElement>
+    changePage: (page: JSX.Element, pageNumber: number) => void;
 }
 
-function Portfolio({changePage}: PortfolioProps){
+let contentKeep: Map<AssetEntry, ReactElement>;
 
-    const mapCollection: Map<AssetEntry, ReactElement> = new Map<AssetEntry, ReactElement>([
-        [AssetManager.FreezerCollection, <FreezerProject changePage={changePage}></FreezerProject>],
-        [AssetManager.ALittleToLateCollection, <ALittleToLate changePage={changePage}></ALittleToLate>],
-        [AssetManager.TractorCollection, <TractorProject changePage={changePage}></TractorProject>],
-        [AssetManager.SweetDreamsCollection, <SweetDreams changePage={changePage}></SweetDreams>]
-    ]);
-    const assetCollection = [AssetManager.FreezerCollection, AssetManager.ALittleToLateCollection, AssetManager.TractorCollection, AssetManager.SweetDreamsCollection];
+function Portfolio({content, changePage}: PortfolioProps){
+
+    if(content !== undefined)
+        contentKeep = content;
 
     function constructItems(){
         let items: ReactElement[] = [];
         let index = 0;
-        mapCollection.forEach((value: ReactElement, key: AssetEntry)=>{
-            items.push(<PortfolioEntry asset={key} pageTarget={value} last={index + 1 === assetCollection.length} changePage={changePage}></PortfolioEntry>);
+        contentKeep.forEach((value: ReactElement, key: AssetEntry)=>{
+            items.push(<PortfolioEntry asset={key} pageTarget={value} last={index + 1 === contentKeep.size} changePage={changePage}></PortfolioEntry>);
             index++;
         });
         return items;
@@ -43,4 +36,8 @@ function Portfolio({changePage}: PortfolioProps){
 
 }
 
-export default Portfolio;
+function setContent(content: Map<AssetEntry, JSX.Element>){
+    contentKeep = content;
+}
+
+export {Portfolio, setContent};

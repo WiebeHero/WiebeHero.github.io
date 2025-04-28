@@ -10,7 +10,7 @@ function About(){
                 <div className={"min-w-350p w-100 d-flex align-items-center justify-content-center mt-5 mb-3 pt-5 position-relative"}>
                     <img className={"w-50 min-w-400p rounded-pill"} src={`${meCollection.GetContentEntry("Image")}`} alt={"Missing"}/>
                     <p className={"w-100 position-absolute start-50 bottom-10 text-white h1 translate-50n text-center m-0"}>Hey,
-                        i'm Wiebe.</p>
+                        I'm Wiebe.</p>
                 </div>
                 <div className={"bg-800 w-50 p-1 border border-2 border-primary min-w-300p rounded"}>
                     <p className={"text-white text-center"}>My name is Wiebe and I'm am 23-year-old programmer with over a decade
@@ -20,7 +20,7 @@ function About(){
                     </p>
                     <p className={"text-white text-center mb-0"}>
                         This early interest developed into a clear career path. I pursued and completed the Game Developer program at MBO level at
-                        Aventus in Apeldoorn, and I am currently in my fourth year of the Creative Media and Game Technologies (CMGT) program.
+                        Aventus in Apeldoorn, and I am currently in my last year of the Creative Media and Game Technologies (CMGT) program.
                         Over the years, I’ve gained a strong foundation in both technical programming and creative problem-solving, and I continue to push
                         myself to grow as a developer and game creator.
                     </p>
