@@ -1,5 +1,4 @@
 import Back from "./Back.tsx";
-import React, {JSX} from "react";
 import TitleSection from "./components/TitleSection.tsx";
 import ContentSection from "./components/ContentSection.tsx";
 import AssetEntry from "../../../../assets/AssetEntry.ts";
