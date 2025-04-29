@@ -22,6 +22,8 @@ function PageManager(){
         setTimeout(() => {
             setAnimationState(new AnimationState(false, true));
             setLocation(page);
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
             setTimeout(() =>{
                 setBusy(false);
             }, 950);

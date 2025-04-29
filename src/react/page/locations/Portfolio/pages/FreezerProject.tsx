@@ -88,6 +88,22 @@ function FreezerProject({changePage}: FreezerProjectProps) {
             <figcaption className={figureStyle}>Figure 3, Anchor Hover.</figcaption>
         </figure>
     </>;
+    const cLeftTPA3 = <>
+        <figure className={"w-100 d-flex flex-column align-items-center"}>
+            <img className={"w-100"}
+                 src={freezerCollection.GetContentEntry("CSTeleportationManager")}
+                 alt={"Missing"}></img>
+            <figcaption className={figureStyle}>Figure 4, Code Snippet Teleportation Manager.</figcaption>
+        </figure>
+    </>;
+    const cRightTPA3 = <>
+        <figure className={"w-100 d-flex flex-column align-items-center"}>
+            <img className={"w-60"}
+                 src={freezerCollection.GetContentEntry("CSTeleportationActivator")}
+                 alt={"Missing"}></img>
+            <figcaption className={figureStyle}>Figure 5, Code Snippet Teleportation Activator.</figcaption>
+        </figure>
+    </>;
 
     //Tooltips
     const cLeftTT = <>
@@ -113,10 +129,10 @@ function FreezerProject({changePage}: FreezerProjectProps) {
             the line behaved correctly, dynamically following the controller’s orientation.
         </p>
         <p className={"text-white"}>
-            Once the pointer was functioning, I integrated the corresponding tooltip text and
+            Once the pointer was functioning (Figure 6), I integrated the corresponding tooltip text and
             ensured
             the highlighted button
-            could glow when referenced. Fortunately, the controller models, carried over from a
+            could glow when referenced (Figure 7). Fortunately, the controller models, carried over from a
             previous project,
             already supported button highlighting, which streamlined this step.
         </p>
@@ -130,12 +146,28 @@ function FreezerProject({changePage}: FreezerProjectProps) {
         <figure className={"w-100 d-flex flex-column align-items-center"}>
             <img className={"w-60"} src={freezerCollection.GetContentEntry("TooltipDevelopment")}
                  alt={"Missing"}></img>
-            <figcaption className={figureStyle}>Figure 4, Tooltip Development.</figcaption>
+            <figcaption className={figureStyle}>Figure 6, Tooltip Development.</figcaption>
         </figure>
         <figure className={"w-100 d-flex flex-column align-items-center"}>
             <img className={"w-70"} src={freezerCollection.GetContentEntry("TooltipGlowingButton")}
                  alt={"Missing"}></img>
-            <figcaption className={figureStyle}>Figure 5, Tooltip Development.</figcaption>
+            <figcaption className={figureStyle}>Figure 7, Tooltip Development.</figcaption>
+        </figure>
+    </>;
+    const cLeftTT2 = <>
+        <figure className={"w-100 d-flex flex-column align-items-center"}>
+            <img className={"w-100"}
+                 src={freezerCollection.GetContentEntry("CSTT")}
+                 alt={"Missing"}></img>
+            <figcaption className={figureStyle}>Figure 8, Code Snippet Tooltip.</figcaption>
+        </figure>
+    </>;
+    const cRightTT2 = <>
+        <figure className={"w-100 d-flex flex-column align-items-center"}>
+            <img className={"w-55"}
+                 src={freezerCollection.GetContentEntry("CSTTS")}
+                 alt={"Missing"}></img>
+            <figcaption className={figureStyle}>Figure 9, Code Snippet Tooltip Settings.</figcaption>
         </figure>
     </>;
 
@@ -161,10 +193,10 @@ function FreezerProject({changePage}: FreezerProjectProps) {
             These options provide essential flexibility, allowing the system to be adapted for
             various
             UI elements—such as
-            an inventory screen or other interactive menus. Shown in Figure 6.
+            an inventory screen or other interactive menus. Shown in Figure 10.
         </p>
         <p className={"text-white"}>
-            As shown in Figure 7, these settings are actively used to position and control the
+            As shown in Figure 11, these settings are actively used to position and control the
             inventory interface.
         </p>
     </>;
@@ -172,14 +204,30 @@ function FreezerProject({changePage}: FreezerProjectProps) {
         <figure className={"w-100 d-flex flex-column align-items-center"}>
             <img className={"w-35"} src={freezerCollection.GetContentEntry("FollowTargetSettings")}
                  alt={"Missing"}></img>
-            <figcaption className={figureStyle}>Figure 6, Follow target script.</figcaption>
+            <figcaption className={figureStyle}>Figure 10, Follow target script.</figcaption>
         </figure>
         <figure className={"w-100 d-flex flex-column align-items-center"}>
             <img className={"w-70"} src={freezerCollection.GetContentEntry("InventoryRotation")}
                  alt={"Missing"}></img>
-            <figcaption className={figureStyle}>Figure 7, Follow target in action.</figcaption>
+            <figcaption className={figureStyle}>Figure 11, Follow target in action.</figcaption>
         </figure>
     </>
+    const cLeftFT2 = <>
+        <figure className={"w-100 d-flex flex-column align-items-center"}>
+            <img className={"w-65"}
+                 src={freezerCollection.GetContentEntry("CSFT")}
+                 alt={"Missing"}></img>
+            <figcaption className={figureStyle}>Figure 12, Code Snippet Follow Target.</figcaption>
+        </figure>
+    </>;
+    const cRightFT2 = <>
+        <figure className={"w-100 d-flex flex-column align-items-center"}>
+            <img className={"w-100"}
+                 src={freezerCollection.GetContentEntry("CSFTS")}
+                 alt={"Missing"}></img>
+            <figcaption className={figureStyle}>Figure 13, Code Snippet Follow Target Settings.</figcaption>
+        </figure>
+    </>;
 
     //Inventory
     const cLeftI = <>
@@ -198,41 +246,41 @@ function FreezerProject({changePage}: FreezerProjectProps) {
             The first step was to determine how inventory items should be visually represented. In a
             previous project,
             I discovered a technique using RenderTextures to create an effective visual layout. As
-            shown in Figure 8,
+            shown in Figure 14,
             the inventory UI appears directly in front of the player, composed of individual slots.
         </p>
         <p className={"text-white"}>
             Each inventory slot uses a RenderTexture linked to a dedicated camera. These cameras are
-            statically positioned (Figure 9)
+            statically positioned (Figure 15)
             and configured to render only objects on a specific inventory layer. The player’s main
             camera is excluded from rendering
             these layers, allowing for clean separation between the game world and the inventory
             display.
-            When an item is placed into a slot—such as slot 1—the result is shown in Figures 10 and
-            11.
+            When an item is placed into a slot—such as slot 1—the result is shown in Figures 16 and
+            17.
         </p>
         <figure className={"w-100 d-flex flex-column align-items-center"}>
             <img className={"w-50"} src={freezerCollection.GetContentEntry("InventorySkeleton")}
                  alt={"Missing"}></img>
-            <figcaption className={figureStyle}>Figure 8, Inventory Skeleton.</figcaption>
+            <figcaption className={figureStyle}>Figure 14, Inventory Skeleton.</figcaption>
         </figure>
     </>;
     const cRightI = <>
         <figure className={"w-80 d-flex flex-column align-items-center"}>
             <img className={"w-100"} src={freezerCollection.GetContentEntry("Cameras")}
                  alt={"Missing"}></img>
-            <figcaption className={figureStyle}>Figure 9, Cameras.</figcaption>
+            <figcaption className={figureStyle}>Figure 15, Cameras.</figcaption>
         </figure>
         <figure className={"w-80 d-flex flex-column align-items-center"}>
             <img className={"w-100"} src={freezerCollection.GetContentEntry("CameraSees")}
                  alt={"Missing"}></img>
-            <figcaption className={figureStyle}>Figure 10, Item in inventory camera display.
+            <figcaption className={figureStyle}>Figure 16, Item in inventory camera display.
             </figcaption>
         </figure>
         <figure className={"w-100 d-flex flex-column align-items-center"}>
             <img className={"w-60"} src={freezerCollection.GetContentEntry("ItemInInventory")}
                  alt={"Missing"}></img>
-            <figcaption className={figureStyle}>Figure 11, Item in inventory display.</figcaption>
+            <figcaption className={figureStyle}>Figure 17, Item in inventory display.</figcaption>
         </figure>
     </>;
     const cLeftI2 = <>
@@ -259,12 +307,12 @@ function FreezerProject({changePage}: FreezerProjectProps) {
             from XRBaseInteractable, which manages what inventory item it is holding and which slot
             is
             occupied.
-            When these components are put to action, this is what that looks like in figure 20.
+            When these components are put to action, this is what that looks like in figure 18.
         </p>
         <p className={"text-white"}>
             There were a few minor problems encountered during the development of the inventory, the
             main problem,
-            which I can refer back to in figure 12, was on how to centre certain objects to the
+            which I can refer back to in figure 15, was on how to centre certain objects to the
             centre
             of the camera,
             for the inventory slot. This was a bit hard to figure out, due to the fact that this was
@@ -281,7 +329,23 @@ function FreezerProject({changePage}: FreezerProjectProps) {
         <figure className={"w-100 d-flex flex-column align-items-center"}>
             <img className={"w-95"} src={freezerCollection.GetContentEntry("InventoryItems")}
                  alt={"Missing"}></img>
-            <figcaption className={figureStyle}>Figure 12, Tooltip Development.</figcaption>
+            <figcaption className={figureStyle}>Figure 18, Inventory Showcase.</figcaption>
+        </figure>
+    </>;
+    const cLeftI3 = <>
+        <figure className={"w-100 d-flex flex-column align-items-center"}>
+            <img className={"w-85"}
+                 src={freezerCollection.GetContentEntry("CSINVINT")}
+                 alt={"Missing"}></img>
+            <figcaption className={figureStyle}>Figure 19, Code Snippet Follow Target.</figcaption>
+        </figure>
+    </>;
+    const cRightI3 = <>
+        <figure className={"w-100 d-flex flex-column align-items-center"}>
+            <img className={"w-100"}
+                 src={freezerCollection.GetContentEntry("CSINVIT")}
+                 alt={"Missing"}></img>
+            <figcaption className={figureStyle}>Figure 20, Code Snippet Follow Target Settings.</figcaption>
         </figure>
     </>;
 
@@ -349,23 +413,39 @@ function FreezerProject({changePage}: FreezerProjectProps) {
         <figure className={"w-100 d-flex flex-column align-items-center"}>
             <img className={"w-95 bg-white"} src={freezerCollection.GetContentEntry("ClassDiagram")}
                  alt={"Missing"}></img>
-            <figcaption className={figureStyle}>Figure 14, Tutorial Part 1.</figcaption>
+            <figcaption className={figureStyle}>Figure 21, Class Diagram Sequence.</figcaption>
         </figure>
     </>;
     const cLeftS2 = <>
-        <figure className={"w-100 d-flex flex-column align-items-center"}>
-            <img className={"w-100 bg-white"}
-                 src={freezerCollection.GetContentEntry("TutorialPart1")}
-                 alt={"Missing"}></img>
-            <figcaption className={figureStyle}>Figure 13, Class Diagram Sequence.</figcaption>
-        </figure>
+    <figure className={"w-100 d-flex flex-column align-items-center"}>
+        <img className={"w-100 bg-white"}
+             src={freezerCollection.GetContentEntry("TutorialPart1")}
+             alt={"Missing"}></img>
+        <figcaption className={figureStyle}>Figure 22, Tutorial Part 1.</figcaption>
+    </figure>
     </>;
     const cRightS2 = <>
         <figure className={"w-100 d-flex flex-column align-items-center"}>
             <img className={"w-100 bg-white"}
                  src={freezerCollection.GetContentEntry("TutorialPart2")}
                  alt={"Missing"}></img>
-            <figcaption className={figureStyle}>Figure 15, Tutorial Part 2.</figcaption>
+            <figcaption className={figureStyle}>Figure 22, Tutorial Part 2.</figcaption>
+        </figure>
+    </>;
+    const cLeftS3 = <>
+        <figure className={"w-100 d-flex flex-column align-items-center"}>
+            <img className={"w-100 bg-white"}
+                 src={freezerCollection.GetContentEntry("CSS1")}
+                 alt={"Missing"}></img>
+            <figcaption className={figureStyle}>Figure 24, Code Snippet Sequence 1.</figcaption>
+        </figure>
+    </>;
+    const cRightS3 = <>
+        <figure className={"w-100 d-flex flex-column align-items-center"}>
+            <img className={"w-85 bg-white"}
+                 src={freezerCollection.GetContentEntry("CSS2")}
+                 alt={"Missing"}></img>
+            <figcaption className={figureStyle}>Figure 25, Code Snippet Sequence 2.</figcaption>
         </figure>
     </>;
 
@@ -385,16 +465,21 @@ function FreezerProject({changePage}: FreezerProjectProps) {
                 {/*Teleportation Anchors.*/}
                 <ContentSection title={"Teleportation Anchors"} content1={cLeftTPA} content2={cRightTPA}></ContentSection>
                 <ContentSection content1={cLeftTPA2} content2={cRightTPA2}></ContentSection>
+                <ContentSection content1={cLeftTPA3} content2={cRightTPA3}></ContentSection>
                 {/*Tooltips*/}
                 <ContentSection title={"Tooltips"} content1={cLeftTT} content2={cRightTT}></ContentSection>
+                <ContentSection content1={cLeftTT2} content2={cRightTT2}></ContentSection>
                 {/*Follow Target*/}
                 <ContentSection title={"Follow Target"} content1={cLeftFT} content2={cRightFT}></ContentSection>
+                <ContentSection content1={cLeftFT2} content2={cRightFT2}></ContentSection>
                 {/*Inventory Part 1*/}
                 <ContentSection title={"Inventory"} content1={cLeftI} content2={cRightI}></ContentSection>
                 <ContentSection content1={cLeftI2} content2={cRightI2}></ContentSection>
+                <ContentSection content1={cLeftI3} content2={cRightI3}></ContentSection>
                 {/*Sequence*/}
                 <ContentSection title={"Sequence System"} content1={cLeftS} content2={cRightS}></ContentSection>
                 <ContentSection content1={cLeftS2} content2={cRightS2}></ContentSection>
+                <ContentSection content1={cLeftS3} content2={cRightS3}></ContentSection>
                 {/*Play through*/}
                 <ContentSection title={"Playthrough"} content1={video}></ContentSection>
             </div>

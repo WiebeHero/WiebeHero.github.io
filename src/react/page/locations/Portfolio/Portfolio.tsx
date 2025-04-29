@@ -26,7 +26,7 @@ function Portfolio({content, changePage}: PortfolioProps){
 
     return (
         <>
-            <div className={"container-fluid d-flex w-100 mt-5 flex-column justify-content-center align-items-center position-relative"}>
+            <div className={"container-fluid d-flex w-100 mt-5 pt-5 mb-5 pb-5 flex-column justify-content-center align-items-center position-relative"}>
                 {constructItems().map((item: ReactElement)=>{
                     return item;
                 })}

@@ -12,6 +12,7 @@ function SlideShow({favorites, content, changePage}: Assets) {
 
     const [contentIndex, setContentIndex] = useState(0);
     const [videoPlaying, setVideoPlaying] = useState(false);
+    const [isBusy, setIsBusy] = useState(false);
 
     const thumbnailElement: RefObject<HTMLDivElement> = useRef<HTMLDivElement>(null);
 
@@ -21,7 +22,19 @@ function SlideShow({favorites, content, changePage}: Assets) {
     const assetEntries: AssetEntry[] = [...favorites.keys()];
     const portfolioPages: JSX.Element[] = [...favorites.values()];
 
+    const video = useRef<HTMLVideoElement>(null);
+
+    function pauseVideo(){
+        console.log("Pausing video...");
+        if(video.current === null)
+            return;
+        video.current.pause();
+        console.log("Paused video!");
+    }
+
     function showNextImage(){
+        if(isBusy)
+            return;
         setContentIndex(index => {
             if(index === assetEntries.length - 1) return 0;
             return index + 1;
@@ -29,6 +42,8 @@ function SlideShow({favorites, content, changePage}: Assets) {
     }
 
     function showPreviousImage(){
+        if(isBusy)
+            return;
         setContentIndex(index => {
            if(index === 0) return assetEntries.length - 1;
            return index - 1;
@@ -40,7 +55,6 @@ function SlideShow({favorites, content, changePage}: Assets) {
             return false;
         const opacity: number = Number(window.getComputedStyle(thumbnailElement.current).opacity);
         return opacity === 1;
-
     }
 
     return (
@@ -52,9 +66,9 @@ function SlideShow({favorites, content, changePage}: Assets) {
                 }} className={"bg-primary border border-0 text-white rounded"}><p className={"h6 p-2 text-center m-0"}>View currently active project</p>
                 </button>
             </div>
-            <div className="w-50 min-w-300p p-0 m-0 position-relative">
+            <div className="w-50 min-w-200p p-0 m-0 position-relative">
                 <div className={"hover-opacity-transition-parent-0"}>
-                    <video onPause={() => {
+                    <video ref={video} onPause={() => {
                         setVideoPlaying(false)
                     }} onPlay={() => {
                         setVideoPlaying(true)
@@ -77,11 +91,31 @@ function SlideShow({favorites, content, changePage}: Assets) {
                     </div>
                 </div>
                 <button onClick={() => {
-                    thumbnailPresent() ? showPreviousImage() : false
+                    if(thumbnailPresent())
+                        showPreviousImage();
+                    else {
+                        pauseVideo();
+                        setVideoPlaying(false);
+                        setIsBusy(true)
+                        setTimeout(() => {
+                            setIsBusy(false);
+                            showPreviousImage();
+                        }, 500);
+                    }
                 }} className={`${buttonStyle} start-50np`}><p
                     className={`${buttonTextStyle}`}>{"<"}</p></button>
                 <button onClick={() => {
-                    thumbnailPresent() ? showNextImage() : false
+                    if(thumbnailPresent())
+                        showNextImage();
+                    else {
+                        pauseVideo();
+                        setVideoPlaying(false);
+                        setIsBusy(true)
+                        setTimeout(() => {
+                            setIsBusy(false);
+                            showNextImage();
+                        }, 500);
+                    }
                 }} className={`${buttonStyle} end-50np`}><p
                     className={`${buttonTextStyle}`}>{">"}</p></button>
                 <div className={"position-absolute bottom-50np start-50 translate-50n d-flex gap-1 z-3"}>
