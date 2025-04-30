@@ -22,7 +22,7 @@ function FreezerProject({changePage}: FreezerProjectProps) {
         repair issues in a CO₂ refrigeration installation within a set time limit. This
         project was developed as a refresher tool for professionals in refrigeration technology,
         helping them revisit potential malfunctions and scenarios they may encounter in real systems.
-        It serves as preparation before attempting the written exam required to renew their certification."</>;
+        It serves as preparation before attempting the written exam required to renew their certification.</>;
 
     //TP Anchor Content.
     const cLeftTPA = <>

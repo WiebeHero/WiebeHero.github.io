@@ -1,16 +1,13 @@
 import AssetEntry from "./AssetEntry.ts";
 import FreezerCollection from "./FreezerCollection.ts";
 import TractorCollection from "./TractorCollection.ts";
+import SweetDreamsCollection from "./SweetDreamsCollection.ts";
 
 import meImage from "/me/MeOnMountain.png";
 
 import aLittleToLateImage from "/projects/a_little_to_late/ALittleToLate.png";
 import aLittleToLateThumbnail from "/projects/a_little_to_late/Thumbnail.png";
 import aLittleToLateVideo from "/projects/a_little_to_late/ALittleToLate.mp4";
-
-import sweetDreamsImage from "/projects/sweet_dreams/SweetDreams.jpg";
-import sweetDreamsThumbnail from "/projects/sweet_dreams/Thumbnail.jpg";
-import sweetDreamsVideo from "/projects/sweet_dreams/SweetDreams.mp4";
 
 
 class AssetManager {
@@ -39,15 +36,8 @@ class AssetManager {
 
         this.tractorCollection = TractorCollection();
 
-        let sweetDreamsCollection = AssetManager.sweetDreamsCollection;
-        sweetDreamsCollection.AddContentEntry("Title", "Sweet Dreams – Multiplayer Party Brawler");
-        sweetDreamsCollection.AddContentEntry("Description", "Sweet Dreams is a lighthearted multiplayer party game where " +
-            "child-drawn monsters come to life and engage in whimsical pillow fights. Designed for 2 to 4 players using " +
-            "controllers, the objective is to outlast the competition and be the last one standing. The game blends " +
-            "playful art with competitive gameplay, creating a fun and imaginative experience for players of all ages.");
-        sweetDreamsCollection.AddContentEntry("Image", sweetDreamsImage);
-        sweetDreamsCollection.AddContentEntry("Video", sweetDreamsVideo);
-        sweetDreamsCollection.AddContentEntry("Thumbnail", sweetDreamsThumbnail);
+        this.sweetDreamsCollection = SweetDreamsCollection();
+
     }
 
     public static get FreezerCollection(): AssetEntry{
