@@ -193,8 +193,6 @@ function SweetDreams({changePage}: SweetDreamsProps) {
             <Back changePage={changePage}></Back>
             <div className="w-100 d-flex flex-column align-items-center">
                 <TitleSection title={title} platform={platform} description={description}></TitleSection>
-                {/*Video*/}
-                <ContentSection title={"Playthrough"} content1={video}></ContentSection>
                 {/*Character Select*/}
                 <ContentSection title={"Character Selection"} content1={cLeftCS} content2={cRightCS}></ContentSection>
                 <ContentSection content1={cLeftCS2} content2={cRightCS2}></ContentSection>
@@ -205,6 +203,8 @@ function SweetDreams({changePage}: SweetDreamsProps) {
                 {/*Damage*/}
                 <ContentSection title={"Pillow Strikes"} content1={cLeftD} content2={cRightD}></ContentSection>
                 <ContentSection content1={cLeftD2} content2={cRightD2}></ContentSection>
+                {/*Video*/}
+                <ContentSection title={"Playthrough"} content1={video}></ContentSection>
             </div>
         </>
     );

@@ -129,6 +129,8 @@ function TractorProject({changePage}: TractorProps) {
             <div className="w-100 d-flex flex-column align-items-center">
                 {/*Title*/}
                 <TitleSection title={title} platform={platform} description={description}></TitleSection>
+                {/*Playthrough*/}
+                <ContentSection title={"Playthrough"} content1={video}></ContentSection>
                 {/*Tractor Chef*/}
                 <ContentSection title={"Tractor Chef"} content1={cFC} ></ContentSection>
                 <ContentSection content1={cLeftFC} content2={cRightFC}></ContentSection>
@@ -136,8 +138,6 @@ function TractorProject({changePage}: TractorProps) {
                 {/*Tractor Assembly*/}
                 <ContentSection title={"Tractor Assembly"} content1={cLeftTA} content2={cRightTA}></ContentSection>
                 <ContentSection content1={cLeftTA2} content2={cRightTA2}></ContentSection>
-                {/*Playthrough*/}
-                <ContentSection title={"Playthrough"} content1={video}></ContentSection>
             </div>
       </>
     );

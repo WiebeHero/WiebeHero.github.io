@@ -117,6 +117,8 @@ function ALittleToLate({changePage}: ALittleToLateProps) {
             <Back changePage={changePage}></Back>
             <div className="w-100 d-flex flex-column align-items-center">
                 <TitleSection title={title} platform={platform} description={description}></TitleSection>
+                {/*Video*/}
+                <ContentSection title={"Playthrough"} content1={video}></ContentSection>
                 {/*Terrain Generator*/}
                 <ContentSection title={"Terrain Generation"} content1={cTG}></ContentSection>
                 <ContentSection content1={cLeftTG} content2={cRightTG}></ContentSection>
@@ -126,8 +128,6 @@ function ALittleToLate({changePage}: ALittleToLateProps) {
                 {/*Crashing*/}
                 <ContentSection title={"Crashing"} content1={cC}></ContentSection>
                 <ContentSection content1={cC2}></ContentSection>
-                {/*Video*/}
-                <ContentSection title={"Playthrough"} content1={video}></ContentSection>
             </div>
         </>
     );

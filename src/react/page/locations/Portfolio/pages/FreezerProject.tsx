@@ -462,6 +462,8 @@ function FreezerProject({changePage}: FreezerProjectProps) {
             <Back changePage={changePage}></Back>
             <div className="w-100 d-flex flex-column align-items-center">
                 <TitleSection title={title} platform={platform} description={description}></TitleSection>
+                {/*Play through*/}
+                <ContentSection title={"Playthrough"} content1={video}></ContentSection>
                 {/*Teleportation Anchors.*/}
                 <ContentSection title={"Teleportation Anchors"} content1={cLeftTPA} content2={cRightTPA}></ContentSection>
                 <ContentSection content1={cLeftTPA2} content2={cRightTPA2}></ContentSection>
@@ -480,8 +482,6 @@ function FreezerProject({changePage}: FreezerProjectProps) {
                 <ContentSection title={"Sequence System"} content1={cLeftS} content2={cRightS}></ContentSection>
                 <ContentSection content1={cLeftS2} content2={cRightS2}></ContentSection>
                 <ContentSection content1={cLeftS3} content2={cRightS3}></ContentSection>
-                {/*Play through*/}
-                <ContentSection title={"Playthrough"} content1={video}></ContentSection>
             </div>
         </>
     );

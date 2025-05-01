@@ -63,7 +63,7 @@ function SlideShow({favorites, content, changePage}: Assets) {
                 <button onClick={() => {
                     setContent(content);
                     changePage(portfolioPages[contentIndex], 2, true);
-                }} className={"bg-primary border border-0 text-white rounded"}><p className={"h6 p-2 text-center m-0"}>View currently active project</p>
+                }} className={"bg-primary border border-0 text-white rounded"}><p className={"h6 p-2 text-center m-0"}>See more...</p>
                 </button>
             </div>
             <div className="w-50 min-w-200p p-0 m-0 position-relative">
