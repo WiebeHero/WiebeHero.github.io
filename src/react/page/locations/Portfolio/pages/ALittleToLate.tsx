@@ -27,8 +27,8 @@ function ALittleToLate({changePage}: ALittleToLateProps) {
     //Terrain Generator
     const cTG = <>
         <p className={"text-white text-center"}>
-            This system also allowed for dynamic content placement. Additional elements—such as road segments featuring a
-            speed sign, or others populated with characters like a grandmother and children—could be introduced seamlessly to
+            This system also allowed for dynamic content placement. Additional elements, such as road segments featuring a
+            speed sign, or others populated with characters like a grandmother and children, could be introduced seamlessly to
             enhance gameplay variety and extend the experience.
         </p>
         <p className={"text-white text-center"}>
@@ -62,7 +62,7 @@ function ALittleToLate({changePage}: ALittleToLateProps) {
     //Texts
     const cT = <>
         <p className={"text-white text-center"}>
-            The in-game phone is controlled by a script that manages incoming text messages, primarily from a character named Chad.
+            The in-game phone is controlled by a script that manages incoming text messages, primarily from a friend named Chad.
             These messages are designed to serve as a distraction, drawing the player's attention away from the road and adding a layer
             of challenge to the gameplay.
 

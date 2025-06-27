@@ -15,8 +15,8 @@ function About(){
                 <div className={"bg-800 w-50 p-1 border border-2 border-primary min-w-300p rounded"}>
                     <p className={"text-white text-center"}>My name is Wiebe and I'm am 23-year-old programmer with over a decade
                         of experience in software/game development, and 2 years in a professional setting. My passion for games began in childhood,
-                        sparked by the sense of wonder I felt while playing. That fascination naturally evolved into curiosity—"Could I create
-                        something like this myself?"—which led me to begin modding Minecraft servers using Java.
+                        sparked by the sense of wonder I felt while playing. That fascination naturally evolved into curiosity: "Could I create
+                        something like this myself?". Which led me to begin modding Minecraft servers using Java.
                     </p>
                     <p className={"text-white text-center mb-0"}>
                         This early interest developed into a clear career path. I pursued and completed the Game Developer program at MBO level at
