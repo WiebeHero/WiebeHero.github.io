@@ -16,7 +16,8 @@ function TractorProject({changePage}: TractorProps) {
 
     //Title etc.
     const title = "The Tractor Project – Educational Assembly Simulation";
-    const platform = "Unity | C#";
+    const tools = "Unity | C#";
+    const platform = "Virtual Reality (VR)";
     const description = <>The Tractor Project is an educational game designed to teach players how to assemble a
         tractor by identifying and correctly placing its various components within a time limit. The game is primarily aimed
         at prospective students attending open days, offering an engaging and interactive introduction to mechanical assembly
@@ -128,7 +129,7 @@ function TractorProject({changePage}: TractorProps) {
             <Back changePage={changePage}></Back>
             <div className="w-100 d-flex flex-column align-items-center">
                 {/*Title*/}
-                <TitleSection title={title} platform={platform} description={description}></TitleSection>
+                <TitleSection title={title} tools={tools} platform={platform} description={description}></TitleSection>
                 {/*Playthrough*/}
                 <ContentSection title={"Playthrough"} content1={video}></ContentSection>
                 {/*Tractor Chef*/}

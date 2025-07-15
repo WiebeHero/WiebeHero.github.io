@@ -5,10 +5,12 @@ import SweetDreamsCollection from "./SweetDreamsCollection.ts";
 import ALittleToLateCollection from "./ALittleToLateCollection.ts";
 
 import meImage from "/me/MeOnMountain.png";
+import FarmerFinanceCollection from "./FarmerFinanceCollection.ts";
 
 class AssetManager {
 
     private static meCollection: AssetEntry = new AssetEntry();
+    private static farmerFinanceCollection: AssetEntry = new AssetEntry();
     private static freezerCollection: AssetEntry = new AssetEntry();
     private static aLittleToLateCollection: AssetEntry = new AssetEntry();
     private static tractorCollection: AssetEntry = new AssetEntry();
@@ -18,6 +20,8 @@ class AssetManager {
         let meCollection = AssetManager.meCollection;
         meCollection.AddContentEntry("Image", meImage);
 
+        this.farmerFinanceCollection = FarmerFinanceCollection();
+
         this.freezerCollection = FreezerCollection();
 
         this.aLittleToLateCollection = ALittleToLateCollection();
@@ -26,6 +30,10 @@ class AssetManager {
 
         this.sweetDreamsCollection = SweetDreamsCollection();
 
+    }
+
+    public static get FarmerFinanceCollection(): AssetEntry{
+        return this.farmerFinanceCollection;
     }
 
     public static get FreezerCollection(): AssetEntry{

@@ -15,7 +15,8 @@ function SweetDreams({changePage}: SweetDreamsProps) {
     const figureStyle: string = "text-white fst-italic";
 
     const title = "Sweet Dreams – Multiplayer Party Brawler";
-    const platform = "Unity | C#";
+    const tools = "Unity | C#";
+    const platform = "Windows";
     const description = <>Sweet Dreams is a lighthearted multiplayer party game where child-drawn monsters come to life
         and engage in whimsical pillow fights. Designed for 2 to 4 players using controllers, the objective is to
         outlast
@@ -192,7 +193,7 @@ function SweetDreams({changePage}: SweetDreamsProps) {
         <>
             <Back changePage={changePage}></Back>
             <div className="w-100 d-flex flex-column align-items-center">
-                <TitleSection title={title} platform={platform} description={description}></TitleSection>
+                <TitleSection title={title} tools={tools} platform={platform} description={description}></TitleSection>
                 {/*Video*/}
                 <ContentSection title={"Playthrough"} content1={video}></ContentSection>
                 {/*Character Select*/}

@@ -16,7 +16,8 @@ function ALittleToLate({changePage}: ALittleToLateProps) {
 
     //General Info
     const title = "A Little Too Late - Texting and Driving Awareness Game";
-    const platform = "Unity | C#";
+    const tools = "Unity | C#";
+    const platform = "Windows";
     const description = <>
         A Little Too Late is a serious game developed to raise awareness about the dangers of
         texting while driving. It highlights the risks and potential consequences of distracted driving by placing players
@@ -116,7 +117,7 @@ function ALittleToLate({changePage}: ALittleToLateProps) {
         <>
             <Back changePage={changePage}></Back>
             <div className="w-100 d-flex flex-column align-items-center">
-                <TitleSection title={title} platform={platform} description={description}></TitleSection>
+                <TitleSection title={title} tools={tools} platform={platform} description={description}></TitleSection>
                 {/*Video*/}
                 <ContentSection title={"Playthrough"} content1={video}></ContentSection>
                 {/*Terrain Generator*/}

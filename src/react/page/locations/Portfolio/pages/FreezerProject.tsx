@@ -16,7 +16,8 @@ function FreezerProject({changePage}: FreezerProjectProps) {
 
     //Title etc.
     const title = "VR Training Simulation – CO₂ Refrigeration System";
-    const platform = "Unity | C#";
+    const tools = "Unity | C#";
+    const platform = "Virtual Reality (VR)";
     const description = <>A virtual reality training game designed to simulate equipment
         maintenance within a retail environment. The objective is to diagnose and
         repair issues in a CO₂ refrigeration installation within a set time limit. This
@@ -461,7 +462,7 @@ function FreezerProject({changePage}: FreezerProjectProps) {
         <>
             <Back changePage={changePage}></Back>
             <div className="w-100 d-flex flex-column align-items-center">
-                <TitleSection title={title} platform={platform} description={description}></TitleSection>
+                <TitleSection title={title} tools={tools} platform={platform} description={description}></TitleSection>
                 {/*Play through*/}
                 <ContentSection title={"Playthrough"} content1={video}></ContentSection>
                 {/*Teleportation Anchors.*/}

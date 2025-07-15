@@ -3,13 +3,15 @@ import {JSX} from "react";
 
 interface TitleSectionProps {
     title: string;
+    tools?: string;
     platform?: string;
     description?: JSX.Element;
 }
 
-function TitleSection({title, platform, description}: TitleSectionProps) {
+function TitleSection({title, tools, platform, description}: TitleSectionProps) {
 
-    const platformElement = <p className={"text-white fs-4"}>{platform}</p>
+    const toolsElement = <p className={"text-white fs-4"}>{tools}</p>
+    const platformElement = <p className={"text-white mb-1 fs-4"}>{platform}</p>
     const descriptionElement = <p className={"w-85 text-white"}>{description}</p>
 
     return (
@@ -17,6 +19,7 @@ function TitleSection({title, platform, description}: TitleSectionProps) {
             <div className="d-flex w-75 min-w-300p text-center flex-column align-items-center">
                 <p className={"h1 text-white mt-3 pt-5"}>{title}</p>
                 {platform !== undefined ? platformElement : ""}
+                {tools !== undefined ? toolsElement : ""}
                 {description !== undefined ? descriptionElement : ""}
             </div>
         </>

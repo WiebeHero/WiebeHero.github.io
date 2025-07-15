@@ -8,6 +8,7 @@ import FreezerProject from "./locations/Portfolio/pages/FreezerProject.tsx";
 import ALittleToLate from "./locations/Portfolio/pages/ALittleToLate.tsx";
 import TractorProject from "./locations/Portfolio/pages/TractorProject.tsx";
 import SweetDreams from "./locations/Portfolio/pages/SweetDreams.tsx";
+import FarmerFinance from "./locations/Portfolio/pages/FarmerFinance.tsx";
 //import {ReactNode} from "react";
 
 function PageManager(){
@@ -31,6 +32,7 @@ function PageManager(){
     }
 
     const favorites: Map<AssetEntry, ReactElement> = new Map<AssetEntry, ReactElement>([
+        [AssetManager.FarmerFinanceCollection, <FarmerFinance changePage={changePage}></FarmerFinance>],
         [AssetManager.FreezerCollection, <FreezerProject changePage={changePage}></FreezerProject>],
         [AssetManager.ALittleToLateCollection, <ALittleToLate changePage={changePage}></ALittleToLate>],
         [AssetManager.TractorCollection, <TractorProject changePage={changePage}></TractorProject>],
