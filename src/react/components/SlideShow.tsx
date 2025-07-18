@@ -59,21 +59,15 @@ function SlideShow({favorites, content, changePage}: Assets) {
 
     return (
         <>
-            <div className={"w-100 d-flex flex-column align-items-center mb-2"}>
-                <button onClick={() => {
-                    setContent(content);
-                    changePage(portfolioPages[contentIndex], 2, true);
-                }} className={"bg-primary border border-0 text-white rounded"}><p className={"h6 p-2 text-center m-0"}>See more...</p>
-                </button>
-            </div>
-            <div className="w-50 min-w-200p p-0 m-0 position-relative">
+
+            <div className="w-100 min-w-200p p-0 m-0 position-relative">
                 <div className={"hover-opacity-transition-parent-0"}>
                     <video ref={video} onPause={() => {
                         setVideoPlaying(false)
                     }} onPlay={() => {
                         setVideoPlaying(true)
                     }} key={assetEntries[contentIndex].GetContentEntry("Video")}
-                           className={"video-slider w-100 h-100 position-absolute"} controls>
+                           className={"video-slider w-100 rounded h-100 position-absolute"} controls>
                         <source src={assetEntries[contentIndex].GetContentEntry("Video")} type="video/mp4"/>
                         Your browser doesn't support the video tag.
                     </video>
@@ -83,7 +77,7 @@ function SlideShow({favorites, content, changePage}: Assets) {
                         {assetEntries.map((asset: AssetEntry) => (
                             <>
                                 <img
-                                    className={"w-100 z-3 object-fit-cover flex-shrink-0 flex-grow-0 translate-transition"}
+                                    className={"w-100 rounded z-3 object-fit-cover flex-shrink-0 flex-grow-0 translate-transition"}
                                     src={`${asset.GetContentEntry("Image")}`} alt={""}
                                     style={{translate: `${-100 * contentIndex}%`}}/>
                             </>
@@ -91,7 +85,7 @@ function SlideShow({favorites, content, changePage}: Assets) {
                     </div>
                 </div>
                 <button onClick={() => {
-                    if(thumbnailPresent())
+                    if (thumbnailPresent())
                         showPreviousImage();
                     else {
                         pauseVideo();
@@ -105,7 +99,7 @@ function SlideShow({favorites, content, changePage}: Assets) {
                 }} className={`${buttonStyle} start-50np`}><p
                     className={`${buttonTextStyle}`}>{"<"}</p></button>
                 <button onClick={() => {
-                    if(thumbnailPresent())
+                    if (thumbnailPresent())
                         showNextImage();
                     else {
                         pauseVideo();
@@ -129,7 +123,16 @@ function SlideShow({favorites, content, changePage}: Assets) {
                         </div>
                     ))}
                 </div>
+                <div className={"position-absolute w-100 d-flex flex-column align-items-center bottom-125np"}>
+                    <button onClick={() => {
+                        setContent(content);
+                        changePage(portfolioPages[contentIndex], 2, true);
+                    }} className={"bg-primary border border-0 text-white rounded"}><p
+                        className={"h6 p-2 text-center m-0"}>See more...</p>
+                    </button>
+                </div>
             </div>
+
         </>
     );
 }
