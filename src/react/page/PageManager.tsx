@@ -8,7 +8,7 @@ import FreezerProject from "./locations/Portfolio/pages/FreezerProject.tsx";
 import TractorProject from "./locations/Portfolio/pages/TractorProject.tsx";
 import SweetDreams from "./locations/Portfolio/pages/SweetDreams.tsx";
 import FarmerFinance from "./locations/Portfolio/pages/FarmerFinance.tsx";
-//import {ReactNode} from "react";
+import ALittleToLate from "./locations/Portfolio/pages/ALittleToLate.tsx";
 
 function PageManager(){
 
@@ -34,11 +34,15 @@ function PageManager(){
         [AssetManager.FarmerFinanceCollection, <FarmerFinance changePage={changePage}></FarmerFinance>],
         [AssetManager.FreezerCollection, <FreezerProject changePage={changePage}></FreezerProject>],
         [AssetManager.TractorCollection, <TractorProject changePage={changePage}></TractorProject>],
-        [AssetManager.SweetDreamsCollection, <SweetDreams changePage={changePage}></SweetDreams>]
+        [AssetManager.SweetDreamsCollection, <SweetDreams changePage={changePage}></SweetDreams>],
     ]);
 
     const content: Map<AssetEntry, ReactElement> = new Map<AssetEntry, ReactElement>([
-
+        [AssetManager.FarmerFinanceCollection, <FarmerFinance changePage={changePage}></FarmerFinance>],
+        [AssetManager.FreezerCollection, <FreezerProject changePage={changePage}></FreezerProject>],
+        [AssetManager.TractorCollection, <TractorProject changePage={changePage}></TractorProject>],
+        [AssetManager.SweetDreamsCollection, <SweetDreams changePage={changePage}></SweetDreams>],
+        [AssetManager.ALittleToLateCollection, <ALittleToLate changePage={changePage}></ALittleToLate>],
     ]);
 
     favorites.forEach((value, key) => {
